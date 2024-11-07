@@ -25,7 +25,7 @@ function App() {
 
   return (
     <main className='main'>
-       <Spline scene="https://prod.spline.design/FpuWYfiE2UJxfxS4/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/FpuWYfiE2UJxfxS4/scene.splinecode" />
     </main>
   )
 }
