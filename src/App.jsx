@@ -1,9 +1,17 @@
+import { useState } from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Spline from '@splinetool/react-spline';
-import { useEffect } from 'react';
+import Card from 'react-bootstrap/Card';
 
 function App() {
 
-  useEffect(() => {
+  const [passInput, setPassInput] = useState(true)
+  const [showMain, setShowMain] = useState(false)
+  const [password, setPassword] = useState("")
+
+  const music = () => {
     const playAudio = () => {
       const audio = new Audio("/spiderman-meme-song.mp3");
       audio.play().catch(error => {
@@ -20,12 +28,41 @@ function App() {
 
     document.addEventListener('click', handleUserInteraction);
 
-    return () => document.removeEventListener('click', handleUserInteraction);
-  }, []);
+    setPassInput(false)
+    setShowMain(true)
+
+  }
+
+  const handleChange = (e) => {
+    setPassword(e.target.value)
+  }
 
   return (
     <main className='main'>
-      <Spline scene="https://prod.spline.design/FpuWYfiE2UJxfxS4/scene.splinecode" />
+
+      {passInput ? <div className='password'>
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title>Enter Password</Card.Title>
+            <Form.Floating>
+              <Form.Control
+                onChange={e => handleChange(e)}
+                id="floatingPasswordCustom"
+                type="password"
+                placeholder="Password"
+                value={password}
+              />
+              <label htmlFor="floatingPasswordCustom">Password</label>
+            </Form.Floating>
+            <Button onClick={music} disabled={password == "123578" ? false : true} variant="secondary">Secondary</Button>
+          </Card.Body>
+        </Card>
+      </div > : ""}
+
+      {showMain ? <div className='main'>
+        <Spline scene="https://prod.spline.design/FpuWYfiE2UJxfxS4/scene.splinecode" />
+      </div> : ""}
+
     </main>
   )
 }
