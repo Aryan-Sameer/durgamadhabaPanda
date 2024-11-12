@@ -11,7 +11,8 @@
 .password {
     height: 100svh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     background-image: url("/passBg.jpg");
     background-repeat: no-repeat;
@@ -21,6 +22,7 @@
 
 .inputField {
     margin: 5px 0px;
+    padding: 30px;
     &:focus-within {
         box-shadow: none;
         border: 1px solid gray;
