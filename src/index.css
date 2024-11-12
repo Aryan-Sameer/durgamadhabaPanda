@@ -1,9 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.main{
+.main {
     height: 100svh;
     width: 100vw;
+}
+
+.password {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/passBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inputField {
+    margin: 5px 0px;
+    &:focus-within {
+        box-shadow: none;
+        border: 1px solid gray;
+    }
 }

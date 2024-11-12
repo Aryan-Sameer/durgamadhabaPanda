@@ -41,11 +41,11 @@ function App() {
     <main className='main'>
 
       {passInput ? <div className='password'>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', border: "none", background: "none" }}>
           <Card.Body>
-            <Card.Title>Enter Password</Card.Title>
             <Form.Floating>
               <Form.Control
+              className="inputField"
                 onChange={e => handleChange(e)}
                 id="floatingPasswordCustom"
                 type="password"
@@ -54,7 +54,7 @@ function App() {
               />
               <label htmlFor="floatingPasswordCustom">Password</label>
             </Form.Floating>
-            <Button onClick={music} disabled={password == "123578" ? false : true} variant="secondary">Open</Button>
+            <Button onClick={music} disabled={password == "123587" ? false : true} variant="secondary">Open</Button>
           </Card.Body>
         </Card>
       </div > : ""}
