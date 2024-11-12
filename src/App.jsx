@@ -54,7 +54,7 @@ function App() {
               />
               <label htmlFor="floatingPasswordCustom">Password</label>
             </Form.Floating>
-            <Button onClick={music} disabled={password == "123578" ? false : true} variant="secondary">Open</Button>
+            <Button onClick={music} disabled={password == "123587" ? false : true} variant="secondary">Open</Button>
           </Card.Body>
         </Card>
       </div > : ""}
