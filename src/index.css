@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100svh;
+    width: 100vw;
+}
+
+.enter {
+    padding: 5px 15px;
+    background-color: rgba(255, 68, 0, 0.827);
+    color: white;
+    border-radius: 25px;
+    border: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.inputField {
+    margin: 5px 0px;
+    padding: 30px;
+
+    &:focus-within {
+        box-shadow: none;
+        border: 1px solid gray;
+    }
+}
+
+.canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.389), rgba(0, 0, 255, 0.34), rgba(0, 128, 0, 0.449), rgba(255, 192, 203, 0.427), rgba(255, 255, 0, 0.433), rgba(238, 130, 238, 0.453), rgba(255, 166, 0, 0.47), rgba(165, 42, 42, 0.453));
+    /* background-color: rgb(255, 87, 115); */
+    min-height: 100svh;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    justify-items: center;
+}
+
+.page::-webkit-scrollbar {
+    width: 0px;
+}
+
+.page {
+    position: sticky;
+    top: 120px;
+    width: 260px;
+    height: 380px;
+    overflow-y: auto;
+    margin: -30px;
+    border-radius: 7px;
+    filter: brightness(1.2);
+    filter: contrast(1.1);
+    box-shadow: 0px 0px 10px 4px rgba(36, 36, 36, 0.355);
+
+    &:hover {
+        z-index: 20;
+        padding: 10px;
+    }
+
+    &:hover>p {
+        display: block;
+    }
+
+    &:hover>img {
+        display: none;
+    }
+}
+
+.page img {
+    object-fit: cover;
+}
+
+.page p {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
