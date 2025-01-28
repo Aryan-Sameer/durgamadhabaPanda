@@ -56,8 +56,8 @@
 .page {
     position: sticky;
     top: 120px;
-    width: 260px;
-    height: 380px;
+    width: 230px;
+    height: 350px;
     overflow-y: auto;
     margin: -25px;
     border-radius: 7px;
